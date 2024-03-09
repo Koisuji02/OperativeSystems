@@ -1,0 +1,16 @@
+find / -name "*.exe" -executable -size +1k
+
+find / -path "*.c" -size +100c
+
+find / -type f -regextype posix-extended -regex "(*A*a*)|(*a*A*)" -user mattia -exec tail -n 3 '{}' \;
+
+find / -mindepth 3 -maxdepth 5 -user mattia -size +249c -name "????" -type f -exec wc -c '{}' \;
+find / -mindepth 3 -maxdepth 5 -user mattia -size +249c -name "????" -type f -exec wc -l '{}' \;
+
+find / -name "A*zzz*.???" -type f -exec tar -zcvf '{}'.tar.gz '{}' \;
+
+find / -type d -name "bin" -exec ls '{}' \;
+
+find / -name "*.c" -group mygroup ! -user mattia
+
+find / -maxdepth 1 -user mattia -exec chmod go-xrw '{}' \; 

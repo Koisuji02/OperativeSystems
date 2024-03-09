@@ -1,0 +1,25 @@
+sort -r -k 1,1 -n lab06e04in.txt 
+
+
+sort -k 2,2 lab06e04in.txt
+
+grep "2011/2012" lab06e04in.txt 
+
+grep "INF1T3" lab06e04in.txt | sort -k 1,1 -n
+
+grep -e "^[0-9]*2\> " -e "^[0-9]*4\> " lab06e04in.txt | sort -k 2,2
+
+grep "TLC1T3" lab06e04in.txt | grep "Da frequentare" | sort  -k 1,1 -r -n
+
+grep "A..A" lab06e04in.txt 
+
+grep "A..A" lab06e04in.txt | grep -v "\<A" | grep -v "A\>"
+
+cut -d ' ' -f 1 lab06e04in.txt | tr -d 0 | tr 8 1 | sort -n | uniq
+
+cut -d ' ' -f 1 lab06e04in.txt | sed s/0// | sed s/8/1/ | sort -n | uniq -d
+
+
+
+
+
